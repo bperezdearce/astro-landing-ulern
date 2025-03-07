@@ -3,8 +3,42 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <section class="py-12 px-4">
-    <h1 class="text-2xl font-bold text-center text-primary">Sobre Mí</h1>
-    <p class="text-center mt-4">Aquí irá una descripción sobre mí.</p>
+  <section class="py-16 px-4 md:px-6 lg:px-8 max-w-6xl mx-auto">
+    <h1
+      class="text-4xl md:text-6xl lg:text-7xl font-playwrite text-primary font-bold text-center mb-12"
+    >
+      Bárbara Pérez de Arce
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-4 px-1">
+        <p
+          class="text-lg lg:text-xl leading-relaxed xl:leading-loose text-justify"
+        >
+          ¡Hola Ulern! Mi nombre es <span class="text-secondary"
+            >Bárbara Pérez de Arce</span
+          >, y soy Desarrolladora Full Stack, Socióloga y Música Autodidacta.
+          Tengo experiencia trabajando en equipos dentro de entornos académicos
+          y profesionales, tanto en el ámbito de la Sociología como en el de la
+          Programación.
+        </p>
+        <p
+          class="text-lg lg:text-xl leading-relaxed text-justify xl:leading-loose"
+        >
+          Me considero una pensadora versátil: mi trayectoria me ha permitido
+          desarrollar habilidades de pensamiento crítico, analítico y creativo.
+        </p>
+      </div>
+      <div class="flex justify-center md:justify-end">
+        <div
+          class="relative w-full max-w-md aspect-square rounded-lg overflow-hidden shadow-xl"
+        >
+          <img
+            src="/images/yo.png"
+            alt="Bárbara Pérez de Arce"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
   </section>
 </Layout>
