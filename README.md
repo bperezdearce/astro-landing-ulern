@@ -21,6 +21,7 @@ astro-landing-ulern/
 │   ├── pages/              # Página principal del sitio
 │   ├── styles/             # Estilos globales en TailwindCSS
 ├── astro.config.ts         # Configuración de Astro.js en TypeScript
+├── vercel.json             # Configuración de Vercel
 └── tsconfig.json           # Configuración de TypeScript
 ```
 
