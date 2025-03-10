@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import { ref } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
@@ -6,9 +6,22 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const swiperRef = ref(null);
+const swiperRef = ref<typeof Swiper | null>(null);
 
-const onSwiper = (swiper) => {
+interface Project {
+  num: string;
+  category: string;
+  title: string;
+  description: string;
+  stack: { name: string }[];
+  image: string;
+  alt: string;
+  demo?: string;
+  github?: string;
+  live?: string;
+}
+
+const onSwiper = (swiper: any) => {
   swiperRef.value = swiper;
 };
 
@@ -138,7 +151,7 @@ const projects = ref([
                 <span class="text-lg font-medium text-zinc-500">{{ project.num }}</span>
               </div>
               
-              <p class="text-justify text-lg mb-4">{{ project.description }}</p>
+              <p class="text-justify text-lg mb-4 leading-relaxed">{{ project.description }}</p>
               
               <div class="flex flex-wrap gap-2 mb-4">
                 <span 
@@ -156,7 +169,7 @@ const projects = ref([
                   :href="project.demo" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  class="inline-block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition"
+                  class="inline-block bg-primary/90 text-white px-4 py-2 rounded hover:bg-red-700 transition"
                 >
                   YouTube
                 </a>
@@ -165,7 +178,7 @@ const projects = ref([
                   :href="project.github" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  class="inline-block bg-zinc-800 text-white px-4 py-2 rounded hover:bg-zinc-900 transition"
+                  class="inline-block bg-primary/90 text-white px-4 py-2 rounded hover:bg-zinc-900 transition"
                 >
                   GitHub
                 </a>
