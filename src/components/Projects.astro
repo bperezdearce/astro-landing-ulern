@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectsCarousel from "../components/ProjectsCarousel.vue"
+---
+
+<Layout>
+  <section class="py-16 px-4 md:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h1 class="text-5xl text-primary font-bold font-playwrite text-center">
+        Proyectos
+      </h1>
+    </div>
+    <div><ProjectsCarousel client:only="vue" /></div>
+  </section>
+</Layout>
