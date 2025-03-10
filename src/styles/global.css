@@ -1,7 +1,21 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'Playwrite IT Moderna';
+    src: url('/fonts/PlaywriteITModerna-VariableFont_wght.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('/fonts/RobotoMono-VariableFont_wght.woff') format('woff');
+    font-display: swap;
+}
+
+
 @theme {
     --font-playwrite: 'Playwrite IT Moderna';
     --color-primary: oklch(34.04% 0.2205 264.36);
     --color-secondary: oklch(67.47% 0.2042 14.62);
 }
+
