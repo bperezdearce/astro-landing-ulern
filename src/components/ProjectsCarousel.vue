@@ -50,7 +50,7 @@ const projects = ref([
       { name: "Figma" },
       { name: "Vercel" },
     ],
-    image: "/images/si-voy.png",
+    image: "/images/si-voy.avif",
     alt: "Sí, voy",
     demo: "https://www.youtube.com/watch?v=73N9lGJr55I",
     github: "https://github.com/sivoyweb/Front",
@@ -68,7 +68,7 @@ const projects = ref([
       { name: "Figma" },
       { name: "Vercel" },
     ],
-    image: "/images/jobs-wozniak.png",
+    image: "/images/jobs-wozniak.avif",
     alt: "Jobs&Wozniak",
     live: "https://jobs-wozniak-e-commerce.vercel.app/",
     github: "https://github.com/bperezdearce/jobs_wozniak_ecommerce",
@@ -92,7 +92,7 @@ const projects = ref([
       { name: "PostgreSQL" },
       { name: "Vercel" },
     ],
-    image: "/images/domenica.png",
+    image: "/images/domenica.avif",
     alt: "Domenica",
     live: "https://domenica-git-main-bperezdearces-projects.vercel.app/",
     github: "https://github.com/bperezdearce/domenica",
@@ -113,7 +113,7 @@ const projects = ref([
       { name: "MongoDB" },
       { name: "Mongoose" },
     ],
-    image: "/images/latinomedia.png",
+    image: "/images/latinomedia.avif",
     alt: "LatinoMedia",
     live: "",
     github: "https://github.com/bperezdearce/latinomedia",
@@ -134,8 +134,8 @@ const projects = ref([
         class="w-full mb-10"
       >
         <swiper-slide v-for="(project, index) in projects" :key="index" class="pb-5">
-          <div class="flex flex-col md:flex-row rounded-lg shadow-medium overflow-hidden">
-            <div class="w-full md:w-1/2 h-64 relative overflow-hidden">
+          <div class="flex flex-col md:flex-row rounded-lg shadow-medium overflow-hidden items-center">
+            <div class="w-full md:w-1/2 h-64 relative overflow-hidden items">
               <img 
                 :src="project.image" 
                 :alt="project.alt" 
