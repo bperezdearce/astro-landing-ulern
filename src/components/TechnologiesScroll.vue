@@ -1,3 +1,19 @@
+<template>
+    <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-8">
+        <li v-for="technology in technologies" :key="technology.name"
+            class="relative w-full h-[100px] rounded-xl flex justify-center items-center group transition-all duration-300">
+
+            <Icon :icon="technology.icon" width="72" height="72" class="flex-shrink-0 text-6xl text-primary
+                 transition-all duration-300" />
+
+
+            <span class="absolute bottom-2 hidden group-hover:flex bg-secondary text-xs px-2 py-1 rounded">
+                {{ technology.name }}
+            </span>
+        </li>
+    </ul>
+</template>
+
 <script lang="ts" setup>
 import { Icon } from '@iconify/vue';
 
@@ -32,18 +48,3 @@ const technologies = [
     { icon: "solar:figma-linear", name: "Figma" },
 ]
 </script>
-<template>
-    <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-8">
-        <li v-for="technology in technologies" :key="technology.name"
-            class="relative w-full h-[100px] rounded-xl flex justify-center items-center group transition-all duration-300">
-
-            <Icon :icon="technology.icon" width="72" height="72" class="flex-shrink-0 text-6xl text-primary
-                 transition-all duration-300" />
-
-
-            <span class="absolute bottom-2 hidden group-hover:flex bg-secondary text-xs px-2 py-1 rounded">
-                {{ technology.name }}
-            </span>
-        </li>
-    </ul>
-</template>
